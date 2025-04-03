@@ -1,0 +1,29 @@
+# Ignore Python compiled files
+__pycache__/
+*.pyc
+*.pyo
+
+# Ignore virtual environments
+venv/
+env/
+myenvmpi/
+
+# Ignore system files
+.DS_Store
+Thumbs.db
+
+# Ignore logs and temp files
+*.log
+*.tmp
+
+# Ignore IDE and editor files
+.vscode/
+.idea/
+*.swp
+
+# Ignore Git-related conflicts
+*.orig
+
+# Ignore CSV et PKL  
+*.csv 
+*.pkl
