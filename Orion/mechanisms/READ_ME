@@ -1,0 +1,40 @@
+The procedure of reduction is the following:
+- DRGEP in stochastic mixing (from 33 to 20 species), time of mixing: 1.5 ms
+- Targets: AR, N2, O2, OH, NH3, H2, NO, NO2, N2O, H2O (since the start) NH, NH2, HO2, H, O, N, NNH, N2H2, N2H3, HNO
+-DRGEP Reactions: from 135 to 75
+-DRGEP: remove N2H3 (all the reactions containing it were removed in the step before)
+-Optimization
+
+Conditions of reduction (all in mole fraction):
+- Fuel: 1 atm, 300 K, H2:0.15, NH3:0.85 (mass flow rate=0.098)
+- Air: 1 atm, 300 K, AR:0.01, O2:0.21, N2:0.79 (mass flow rate=0.652)
+- Burnt: 1 atm, 2111.77 K, NH3:4.909481956472845e-09, H2:0.004970172376065993, AR:0.007466816770751359, O2:0.0015803164691884659, N2:0.6755371195244586, NO:0.0008124122463771877, NO2:1.0147846534534175e-07, H2O:0.3076392271034457, N2O:3.407633448073957e-08, OH:0.001993795045430922 (mass flow rate= 0.25)
+
+Conditions of optimization:
+- Stochastic mixing in the same operating conditions of before
+- Premixed flame with fresh gases at 300 K, fuel and air in the same composition, 1 atm and equivalence ratio 1
+- Premixed flame with fresh gases at 300 K, fuel and air in the same composition, 1 atm and equivalence ratio 1.5
+- Premixed flame with fresh gases at 300 K, fuel and air in the same composition, 1 atm and equivalence ratio 0.75
+- Premixed flame with fresh gases at 300 K, fuel (NH3:0.9, H2:0.1, mole fractions) and air in the same composition of before, 1 atm and equivalence ratio 1
+
+The two optimized mechanisms are: STEC_A and STEC_B
+
+STEC_B Optimization step:
+- 0D stochastic mix, 6.5 %
+- PMX, phi=1.0, 4.5 %
+- PMX, phi=0.5, 2.5 %
+- PMX, phi=1.5, 1.0 %
+- PMX, phi=1.0, 0.5 %
+
+STEC_A Optimization step:
+- 0D stochastic mix, 6.5 %
+- 0D stochastic mix, 4.5 %
+- 0D stochastic mix, 2.5 %
+- PMX, phi=1.0, 2.0 %
+- PMX, phi=1.5, 0.5 %
+- PMX, phi=0.5, 0.25 %
+- PMX, phi=1.0, 0.25 %
+- 0D stochastic mix, 0.25 %
+- PMX, phi=1.0, X_H2=0.1, 0.5 %
+
+all the steps, except when specified differently are done for X_H2=15 % by volume, fuel-based
